@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.banner-area{
+  background-image: url(4.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+nav{
+  width: 100%;
+  padding: 0;
+  background: #20B2AA;
+  margin: auto;
+}
+
+nav ul{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+  width: 178px;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  text-align: center;
+  font-family: arial;
+}
+
+nav ul li a {
+  margin: 0 15px;
+}
+
+nav ul li:hover{
+  background: #000;
+  color: #fff;
+  font-weight: 900;
+}
+
+body{
+  background: #AFEEEE;
+  font-family: arial;
+
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 0;
+  padding-top: 35px;
+  letter-spacing: 2px;
+}
+
+.wrapper{
+  width: 1250px;
+  margin: 5% auto;
+  list-style: none;
+}
+
+.box{
+  width: 320px;
+  height: 250px;
+  float: left;
+  margin: 0 15px;
+  background: #111;
+  border-radius: 25px;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.img-area{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 7px solid darkorange;
+  margin: auto;
+
+}
+
+.img-area img{
+  width: 100%;
+}
+
+
+.box:before{
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff,
+  #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  -webkit-background-size: 400%;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: animate 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease;
+
+}
+
+.box:hover:before{
+  opacity: 1;
+}
+
+.box:after{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+
+}
+
+.box h2{
+  text-transform: uppercase;
+}
+
+.box p{
+  line-height: 1.5;
+  color: #9d9d9d;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+
+  50%{
+    background-position: 400% 0;
+  }
+
+  10%{
+    background-position: 0 0;
+  }
+}
